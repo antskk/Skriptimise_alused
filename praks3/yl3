@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Skript ljastab ainepunktide ja nädalate põhjal ühe nädala eeldatava ajakulu
+
+echo -n "Sisesta ainepunktide arv: "
+
+read var1;
+
+echo -n "Sisesta nädalate arv: "
+
+read var2;
+
+x=`echo "$var1*26/$var2" | bc`
+
+echo $x
+
+
+
