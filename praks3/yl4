@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Skript näitab reisijate ja kohtade arvu põhjal mitu on täielikult täidetud bussi ja mitu reisijat on maha jäänud
+
+echo -n "Kui palju reisijaid on grupis: "
+
+read val1;
+
+echo -n "Mitu kohta on bussis: "
+
+read val2;
+
+bussid=$(($val1 / $val2))
+
+ylejaanud=$(($val1 % $val2))
+
+if test $ylejaanud -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+
+echo "Kokku on vaja $bussid bussi"
+
+
