@@ -1,0 +1,10 @@
+#!/bin/bash
+#Skript annab tead kas käsureale sisestatud number paaris või paaritu
+
+jaak=$(( $1 % 2 ))
+	if [ $jaak -eq 0 ]; then
+        	echo "$1 on paaris"
+	else
+		echo "$1 on paaritu"
+fi
+
